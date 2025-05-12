@@ -132,3 +132,29 @@ payments.forEach((payment, idx) => {
     gateway.makePayment(payment.mode, payment.details);
 });
 
+
+
+
+
+//      UML Class Diagram
+//      =================
+        
+//      +--------------------+
+//      |  PaymentGateway    |
+//      +--------------------+
+//      | - bankMap          |
+//      +--------------------+
+//      | + makePayment()    |
+//      | + _validate()      |
+//      +--------------------+
+//              |
+//              |
+//              | uses
+//              ↓
+//      +--------------+   +--------------+   +--------------+
+//      |  HSBCBank    |   |  SIBBank     |   |  AxisBank    |
+//      +--------------+   +--------------+   +--------------+
+//      | + process()  |   | + process()  |   | + process()  |
+//      +--------------+   +--------------+   +--------------+
+
+
