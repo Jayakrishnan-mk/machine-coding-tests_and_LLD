@@ -1,0 +1,152 @@
+📌 Step 1: Core CS Fundamentals (To Fill the Gap)
+Since you don’t have a CS degree, we’ll cover the most important CS concepts that come up in backend interviews.
+
+1. System Design Basics
+Domain Modeling (Critical for ThoughtWorks-style interviews)
+
+What is domain modeling?
+
+How to model a real-world system (e.g., Uber, Netflix, Twitter) into entities and relationships.
+
+Example: Design a "Ride-Sharing" domain model with entities like User, Driver, Ride, Payment.
+
+Abstract Modeling
+
+Abstraction vs Encapsulation.
+
+How to simplify complex systems using abstraction.
+
+2. Object-Oriented Programming (OOP) & SOLID Principles
+OOP Basics (Encapsulation, Inheritance, Polymorphism, Abstraction).
+
+SOLID Principles (Very important for interviews!)
+
+Single Responsibility Principle
+
+Open/Closed Principle
+
+Liskov Substitution Principle
+
+Interface Segregation Principle
+
+Dependency Inversion Principle
+
+Design Patterns (Factory, Singleton, Observer, Strategy, etc.)
+
+3. Data Structures & Algorithms (Basic Level)
+Since you’re backend-focused, we’ll keep it minimal:
+
+Arrays, Strings, Hashmaps (Most common in interviews).
+
+Basic Algorithms (Sorting, Searching, Sliding Window).
+
+Time & Space Complexity (Big-O notation).
+
+📌 Step 2: Backend Development (Node.js + Related Tech)
+1. Node.js (Advanced)
+Event Loop & Async Programming (Callbacks, Promises, Async/Await).
+
+Worker Threads vs Clustering.
+
+Streams & Buffers.
+
+Error Handling & Debugging.
+
+Security Best Practices (JWT, CORS, Rate Limiting).
+
+2. NestJS (If Interview Requires)
+Modules, Controllers, Services.
+
+Dependency Injection.
+
+Microservices in NestJS.
+
+Authentication (Passport.js, JWT).
+
+3. Databases
+SQL (MySQL/PostgreSQL)
+Indexing & Query Optimization.
+
+Transactions & ACID Properties.
+
+Normalization vs Denormalization.
+
+Joins (Inner, Left, Right, Full).
+
+NoSQL (MongoDB)
+Schema Design (Embedding vs Referencing).
+
+Aggregation Pipeline.
+
+Sharding & Replication.
+
+Redis
+Caching Strategies.
+
+Pub/Sub Model.
+
+Redis as a Session Store.
+
+4. Kafka (Message Brokers)
+Pub-Sub vs Queues.
+
+Kafka Architecture (Topics, Partitions, Brokers).
+
+Consumer Groups & Offsets.
+
+📌 Step 3: Interview Questions (Categorized)
+1. Domain Modeling & Abstract Modeling
+"How would you model an e-commerce system?"
+
+"Explain the domain model for a food delivery app."
+
+"How do you abstract database interactions in your code?"
+
+2. SOLID Principles
+"Give an example where you applied the Open/Closed Principle."
+
+"How does Dependency Inversion improve testability?"
+
+"What’s wrong with a class handling both user authentication and logging?" (Single Responsibility).
+
+3. Node.js
+"Explain the Event Loop in Node.js."
+
+"How would you handle memory leaks in Node?"
+
+"What’s the difference between setImmediate and process.nextTick?"
+
+4. Databases
+"When would you choose MongoDB over MySQL?"
+
+"How do you optimize a slow SQL query?"
+
+"Explain Redis use cases in a web app."
+
+5. System Design (Basic)
+"Design a URL shortener like Bit.ly."
+
+"How would you scale a real-time chat app?"
+
+📌 Step 4: Action Plan (How to Prepare)
+Week 1-2:
+
+Study Domain Modeling & SOLID Principles (Most urgent).
+
+Revise Node.js Event Loop & Async Patterns.
+
+Solve 5-10 SQL & NoSQL problems.
+
+Week 3-4:
+
+Deep dive into Databases (Indexing, Transactions, Redis Caching).
+
+Learn Kafka basics (If required for interviews).
+
+Practice NestJS (If needed).
+
+Week 5+:
+
+Mock interviews (Use Pramp or Interviewing.io).
+
+Solve real-world system design questions.

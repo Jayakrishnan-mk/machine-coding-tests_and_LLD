@@ -128,7 +128,7 @@ let payments = [
 ]
 
 payments.forEach((payment, idx) => {
-    console.log(`✅ Payment #${idx + 1} processed`);
+    console.log(`\n✅ Payment #${idx + 1} processed`);
     gateway.makePayment(payment.mode, payment.details);
 });
 
