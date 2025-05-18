@@ -30,134 +30,134 @@
 // // and return this at the end. done
 
 
-// class PaymentGateway {
-//     constructor() {
-//         this.bankMap = {        // encapsulated the bank map
-//             card: new KotakBank(),
-//             upi: new AxisBank(),
-//             onlineBanking: new ICICIBank()
-//         }
-//     }
+class PaymentGateway {
+    constructor() {
+        this.bankMap = {        // encapsulated the bank map
+            card: new KotakBank(),
+            upi: new AxisBank(),
+            onlineBanking: new ICICIBank()
+        }
+    }
 
-//     makePayment(payment) {
-//         let bank = this.bankMap[payment.mode];
+    makePayment(payment) {
+        let bank = this.bankMap[payment.mode];
 
-//         if (!bank) {
-//             console.log('❌ Banking mode is invalid!');
-//             return false;
-//         }
+        if (!bank) {
+            console.log('❌ Banking mode is invalid!');
+            return false;
+        }
 
-//         if (!payment.isValid()) {
-//             console.log('❌ Missing required Payment details');
-//             return false;
-//         }
+        if (!payment.isValid()) {
+            console.log('❌ Missing required Payment details');
+            return false;
+        }
 
-//         let isSuccess = bank.process(); // delegated the banks process separately
-//         return isSuccess;
-//     }
-// }
+        let isSuccess = bank.process(); // delegated the banks process separately
+        return isSuccess;
+    }
+}
 
-// class Payment {
-//     constructor(mode, details) {
-//         this.mode = mode;
-//         this.details = details;
-//     }
+class Payment {
+    constructor(mode, details) {
+        this.mode = mode;
+        this.details = details;
+    }
 
-//     isValid() {        // encapsulated the validation fn
-//         if (this.mode === 'card') {
-//             return this.details.number && this.details.expiry && this.details.cvv
-//         } else if (this.mode === 'upi') {
-//             return this.details.vpa;
-//         } else if (this.mode === 'onlineBanking') {
-//             return this.details.userId && this.details.password;
-//         }
-//         return false;
-//     }
-// }
+    isValid() {        // encapsulated the validation fn
+        if (this.mode === 'card') {
+            return this.details.number && this.details.expiry && this.details.cvv
+        } else if (this.mode === 'upi') {
+            return this.details.vpa;
+        } else if (this.mode === 'onlineBanking') {
+            return this.details.userId && this.details.password;
+        }
+        return false;
+    }
+}
 
-// class KotakBank {
-//     process() {
-//         let chance = Math.random();
-//         // 90% success
-//         if (chance > 0.1) {
-//             console.log('✅ KotakBank: Payment process completed successfully')
-//             return true;
-//         } else {
-//             console.log('❌ KotakBank: Payment process failed due to card blocked!')
-//             return false;
-//         }
-//     }
-// }
+class KotakBank {
+    process() {
+        let chance = Math.random();
+        // 90% success
+        if (chance > 0.1) {
+            console.log('✅ KotakBank: Payment process completed successfully')
+            return true;
+        } else {
+            console.log('❌ KotakBank: Payment process failed due to card blocked!')
+            return false;
+        }
+    }
+}
 
-// class AxisBank {
-//     process() {
-//         let chance = Math.random();
-//         // 80% success
-//         if (chance > 0.2) {
-//             console.log('✅ AxisBank: Payment process completed successfully')
-//             return true;
-//         } else {
-//             console.log('❌ AxisBank: Payment process failed due to insufficient balance!')
-//             return false;
-//         }
-//     }
+class AxisBank {
+    process() {
+        let chance = Math.random();
+        // 80% success
+        if (chance > 0.2) {
+            console.log('✅ AxisBank: Payment process completed successfully')
+            return true;
+        } else {
+            console.log('❌ AxisBank: Payment process failed due to insufficient balance!')
+            return false;
+        }
+    }
 
-// }
+}
 
-// class ICICIBank {
-//     process() {
-//         let chance = Math.random();
-//         // 70% success
-//         if (chance > 0.1) {
-//             console.log('✅ ICICIBank: Payment process completed successfully')
-//             return true;
-//         } else {
-//             console.log('❌ ICICIBank: Payment process failed due to bank server down!')
-//             return false;
-//         }
-//     }
-// }
+class ICICIBank {
+    process() {
+        let chance = Math.random();
+        // 70% success
+        if (chance > 0.1) {
+            console.log('✅ ICICIBank: Payment process completed successfully')
+            return true;
+        } else {
+            console.log('❌ ICICIBank: Payment process failed due to bank server down!')
+            return false;
+        }
+    }
+}
 
 
-// let gatewayy = new PaymentGateway();
+let gatewayy = new PaymentGateway();
 
-// let payments = [
-//     new Payment(
-//         'card',
-//         {
-//             number: 12345678,
-//             expiry: '02/2026',
-//             cvv: 678
-//         }),
-//     new Payment(
-//         'upi',
-//         {
-//             vpa: 'username@icicibank'
-//         }),
-//     new Payment(
-//         'onlineBanking',
-//         {
-//             userId: 'user234',
-//             password: '1234567890asdf'
-//         }
-//     ),
-//     new Payment(
-//         'onlineBanking',
-//         {
-//             userId: 'user234',
-//         }
-//     ),
-//     new Payment(
-//         'onlineBan',
-//         {
-//             userId: 'user234',
-//             password: '1234567890asdf'
-//         }
-//     ),
-// ];
+let payments = [
+    new Payment(
+        'card',
+        {
+            number: 12345678,
+            expiry: '02/2026',
+            cvv: 678
+        }),
+    new Payment(
+        'upi',
+        {
+            vpa: 'username@icicibank'
+        }),
+    new Payment(
+        'onlineBanking',
+        {
+            userId: 'user234',
+            password: '1234567890asdf'
+        }
+    ),
+    new Payment(
+        'onlineBanking',
+        {
+            userId: 'user234',
+        }
+    ),
+    new Payment(
+        'onlineBan',
+        {
+            userId: 'user234',
+            password: '1234567890asdf'
+        }
+    ),
+];
 
-// payments.map((payment, index) => {
-//     console.log(`Payment id : #${index + 1}`)
-//     gatewayy.makePayment(payment);
-// })
+payments.map((payment, index) => {
+    console.log(`Payment id : #${index + 1}`)
+    gatewayy.makePayment(payment);
+})
 
