@@ -95,7 +95,7 @@ class MovieBookingSystem {
         const show = this.shows.get(booking.showId);
         if (!show) return false;
 
-        const success = show.cancelSeat();
+        const success = show.cancelSeat(booking.userId);
         if (!success) return false;
 
         this.bookings.delete(bookingId);
